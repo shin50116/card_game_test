@@ -10,22 +10,31 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(10, 80px);
+    grid-template-columns: repeat(5, 100px);
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .card {
-    width: 80px;
-    height: 80px;
-    background-color: #888;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0; /* 밝은 배경색으로 변경 */
     cursor: pointer;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.flipped, .matched {
-    background-color: inherit;
+.card img {
+    width: 90px; /* 이미지 크기 키움 */
+    height: 90px;
+    display: none; /* 카드 뒤집기 전에는 이미지 숨기기 */
+}
+
+.flipped img {
+    display: block; /* 뒤집힌 카드의 이미지만 표시 */
 }
 
 .message {
